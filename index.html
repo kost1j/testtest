@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="store">
+	<head >
+		<meta charset="utf-8">
+		<title>Test</title>
+		<link rel="stylesheet" href="css/normalize.css"/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/vender/angular.min.js"></script>
+		<script type="text/javascript" src="js/vender/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body class="page-body">
+			<div class = "load-block" ng-controller="StoreController as store">
+					<div class="load-block__header">
+						<h4>Target Indicator Demo</h4>
+					</div>
+					<div class="indicator-block load-block__indicator-block">
+						<div class="indicator-block__wrapper">
+							<div class="indicator-block__state">
+								<div class="indicator-block__state-text">Reached:</div>
+
+								<div class="indicator-block__state-wrapper">
+
+									<div class="indicator-block__state-line-wrapper">
+										<div class="indicator-block__state-line"></div>
+									</div>
+									<div class="indicator-block__state-cost">
+										<div class="indicator-block__state-cost-icon"></div>
+										<div class="indicator-block__state-cost-text">$0</div>
+									</div>
+								</div>
+							</div>
+							<div class="indicator-block__target">
+								<span>Target</span><br>
+								<span>${{store.costTarget}}</span>
+							</div>
+						</div>
+						<div class="massage-block indicator-block__massage-block">
+							<div class="massage-block__icon"></div>
+							<span class="massage-block__text">You need ${{store.costTarget-store.loadCost}} more to reach your target</span>
+						</div>
+					</div>
+			</div>			
+	</body>
+</html>
